@@ -1,6 +1,7 @@
 def add(a, b):
     return a + b
 
+var=
 
 x = 1
 y = 2
