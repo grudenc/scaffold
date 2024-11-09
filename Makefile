@@ -15,10 +15,10 @@ venv-update:
 	@echo -e "Enter virtual environment using:\n. $(VENV_DIR)/bin/activate\n"
 
 format:
-	black *.py
+	@/bin/bash -c "source $(VENV_DIR)/bin/activate && black *.py"
 
 lint:
-	pylint --disable=R,C hello.py
+	@/bin/bash -c "source $(VENV_DIR)/bin/activate && pylint --disable=R,C hello.py"
 
 test:
-	python -m pytest -vv --cov=hello test_hello.py
+	@/bin/bash -c "source $(VENV_DIR)/bin/activate && python -m pytest -vv --cov=hello test_hello.py"
